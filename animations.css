@@ -1,0 +1,66 @@
+/* animations.css: movement, fades and reduced-motion support */
+
+.btn {
+  transition:transform .2s
+}
+
+.btn:hover {
+  transform:translateY(-2px)
+}
+
+.viz .n {
+  animation:pulse 3.6s ease-in-out infinite
+}
+
+@keyframes pulse {
+  50% {
+    opacity:.25
+  }
+}
+
+.rv {
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .7s,transform .7s
+}
+
+.rv.in {
+  opacity:1;
+  transform:none
+}
+
+@media(prefers-reduced-motion:reduce) {
+  * {
+    animation:none!important;
+    transition:none!important;
+    scroll-behavior:auto!important
+  }
+  .rv {
+    opacity:1;
+    transform:none
+  }
+}
+
+.d1 {
+  animation-delay:0.5s
+}
+
+.d2 {
+  animation-delay:1.0s
+}
+
+.d3 {
+  animation-delay:1.5s
+}
+
+.d4 {
+  animation-delay:2.0s
+}
+
+.d5 {
+  animation-delay:2.5s
+}
+
+.d6 {
+  animation-delay:3.0s
+}
